@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <div class="logo-mark">QGF</div>
+      <div class="logo-text">
+        <span class="abbr">QG Foundation</span>
+        <span class="full">Qasem Ghairat Foundation</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav">
+      {% for link in site.nav_links %}
+        <a href="{{ link.url | relative_url }}"
+           {% if page.url == link.url %}class="active{% if link.title == 'Support Us' %} nav-cta{% endif %}"{% elsif link.title == 'Support Us' %}class="nav-cta"{% endif %}>
+          {{ link.title }}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

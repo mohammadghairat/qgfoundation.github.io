@@ -1,0 +1,32 @@
+title: "Qasem Ghairat Foundation"
+description: "A philanthropic organization dedicated to education for all in Afghanistan and Pakistan."
+baseurl: ""
+url: "https://www.qgfoundation.org"
+
+# Author
+author:
+  name: "Qasem Ghairat Foundation"
+  email: "info@qgfoundation.org"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Navigation
+nav_links:
+  - title: "About Us"
+    url: "/about/"
+  - title: "Programs"
+    url: "/programs/"
+  - title: "Resources"
+    url: "/resources/"
+  - title: "Support Us"
+    url: "/support/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
